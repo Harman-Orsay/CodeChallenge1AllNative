@@ -1,9 +1,15 @@
 # CodeChallenge1AllNative
 A MVVM-based, all-native (without any 3rd party library) solution to the Code challenge (for Properly's senior android dev, 2020). Focus is on architecture (something that'll work well with small to medium sized projects)
+Done for iOS.
+
 
 The code challenge (Created by Rohan Ramsay, for Properly, October 2020) -
 
-Properly coding challenge for Senior Android developer
+
+
+
+
+---Properly coding challenge for Senior Android developer---
 
 Create a multi-tab android app to do the following -
 
