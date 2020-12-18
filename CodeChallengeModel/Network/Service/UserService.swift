@@ -10,9 +10,9 @@ import Combine
 
 protocol UserService {
     
-    func fetchNextPage() -> AnyPublisher<[User], User.Error>
-    func delete(user: User) -> AnyPublisher<Void, User.Error>
-    func add(user: User) -> AnyPublisher<User, User.Error>
+    func fetchNextPage() -> AnyPublisher<[User], APIError.User>
+    func delete(user: User) -> AnyPublisher<Void, APIError.User>
+    func add(user: User) -> AnyPublisher<User, APIError.User>
 }
 
 //Service can be implemented via rest, graphql etc.

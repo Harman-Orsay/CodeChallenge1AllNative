@@ -16,7 +16,7 @@ struct UserReponseErrorDTO: Decodable {
         var message: String?
     }
     
-    var error: User.Error {
+    var error: APIError.User {
         var errorMessage = ""
         
         if let field = data.first?.field {

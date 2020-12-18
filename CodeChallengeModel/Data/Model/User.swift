@@ -8,12 +8,12 @@
 import Foundation
 
 public struct User {
-    var id: String
-    var email: String
-    var name: String
-    var gender: Gender
-    var status: Status
-    var lastUpdated: Date
+    public var id: Int
+    public var email: String
+    public var name: String
+    public var gender: Gender
+    public var status: Status
+    public var lastUpdated: Date
 }
 
 extension User {
@@ -38,9 +38,9 @@ extension User {
 extension User {
     static func sorter(_ user1: User, _ user2: User, by field: SortableField) -> Bool{
         switch field {
-        case .name: return user1.name > user2.name
-        case .id: return user1.id > user2.id
-        case .lastUpdated: return user1.lastUpdated > user2.lastUpdated
+        case .name: return user1.name < user2.name
+        case .id: return user1.id < user2.id
+        case .lastUpdated: return user1.lastUpdated < user2.lastUpdated
         }
     }
 }

@@ -10,7 +10,7 @@ import Combine
 
 class UserRestfulService: UserService {
     
-    private var nextPage: Int = 0
+    private var nextPage: Int = 1
     private static let decoder = JSONDecoder()
     private static let background = DispatchQueue.global(qos: .default)
     
@@ -24,9 +24,9 @@ class UserRestfulService: UserService {
         nextPage += 1
     }
     
-    func fetchNextPage() -> AnyPublisher<[User], User.Error> {
+    func fetchNextPage() -> AnyPublisher<[User], APIError.User> {
         guard let request = Endpoint.fetch(page: nextPage).urlRequest else {
-            return Fail<[User], User.Error>(error: .network).eraseToAnyPublisher()
+            return Fail<[User], APIError.User>(error: .network).eraseToAnyPublisher()
         }
         
         return URLSession.shared
@@ -37,7 +37,7 @@ class UserRestfulService: UserService {
                 do {
                     return try Self.decoder.decode(UserFetchResponseSuccessDTO.self, from: data)
                 } catch {
-                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? User.Error.network
+                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? APIError.User.network
                 }
             }
             .map(\.data)
@@ -45,7 +45,7 @@ class UserRestfulService: UserService {
             .mapError {
                 switch $0 {
                 case is URLError: return .network
-                case is User.Error: return $0 as! User.Error
+                case is APIError.User: return $0 as! APIError.User
                 default: return .network
                 }
             }
@@ -54,9 +54,9 @@ class UserRestfulService: UserService {
             .eraseToAnyPublisher()
     }
     
-    func delete(user: User) -> AnyPublisher<Void, User.Error> {
-        guard let request = Endpoint.delete(id: user.id).urlRequest else {
-            return Fail<Void, User.Error>(error: .network).eraseToAnyPublisher()
+    func delete(user: User) -> AnyPublisher<Void, APIError.User> {
+        guard let request = Endpoint.delete(id: "\(user.id)").urlRequest else {
+            return Fail<Void, APIError.User>(error: .network).eraseToAnyPublisher()
         }
         return URLSession.shared
             .dataTaskPublisher(for: request)
@@ -66,19 +66,19 @@ class UserRestfulService: UserService {
                 do {
                     return try Self.decoder.decode(UserDeleteReponseSuccessDTO.self, from: data)
                 } catch {
-                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? User.Error.network
+                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? APIError.User.network
                 }
             }
             .map(\.code)
             .tryMap { code -> Void in
                 guard case 200...202 = code else {
-                    throw User.Error.network
+                    throw APIError.User.network
                 }
             }
             .mapError {
                 switch $0 {
                 case is URLError: return .network
-                case is User.Error: return $0 as! User.Error
+                case is APIError.User: return $0 as! APIError.User
                 default: return .network
                 }
             }
@@ -86,9 +86,9 @@ class UserRestfulService: UserService {
             .eraseToAnyPublisher()
     }
     
-    func add(user: User) -> AnyPublisher<User, User.Error> {
+    func add(user: User) -> AnyPublisher<User, APIError.User> {
         guard let request = Endpoint.create(user: UserDTO(from: user)).urlRequest else {
-            return Fail<User, User.Error>(error: .network).eraseToAnyPublisher()
+            return Fail<User, APIError.User>(error: .network).eraseToAnyPublisher()
         }
 
         return URLSession.shared
@@ -99,7 +99,7 @@ class UserRestfulService: UserService {
                 do {
                     return try Self.decoder.decode(UserCreateReponseSuccessDTO.self, from: data)
                 } catch {
-                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? User.Error.network
+                    throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? APIError.User.network
                 }
             }
             .map(\.data)
@@ -107,7 +107,7 @@ class UserRestfulService: UserService {
             .mapError {
                 switch $0 {
                 case is URLError: return .network
-                case is User.Error: return $0 as! User.Error
+                case is APIError.User: return $0 as! APIError.User
                 default: return .network
                 }
             }

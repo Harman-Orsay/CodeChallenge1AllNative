@@ -7,21 +7,9 @@
 
 import Foundation
 
-extension UserDTO {
-    init(from user: User, forNewUser: Bool = false) {
-        self.init(id: forNewUser ? nil : user.id,
-                  createdAt: forNewUser ? nil :  user.lastUpdated.toString(),
-                  updatedAt: forNewUser ? nil :  user.lastUpdated.toString(),
-                  email: user.email,
-                  gender: user.gender.rawValue,
-                  name: user.name,
-                  status: user.status.rawValue)
-    }
-}
-
 extension User {
     init(dto: UserDTO) {
-        self.init(id: dto.id ?? "",
+        self.init(id: dto.id ?? -1,
                   email: dto.email,
                   name: dto.name,
                   gender: Gender(rawValue: dto.gender) ?? .female,

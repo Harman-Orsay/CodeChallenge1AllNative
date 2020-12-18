@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserDTO: Codable { // for GET & POST
-    let id: String?
+    let id: Int?
     let createdAt: String?
     let updatedAt: String?
     let email: String
@@ -43,4 +43,16 @@ extension UserDTO {
         df.locale = Locale(identifier: "en_US_POSIX")
         return df
     }()
+}
+
+extension UserDTO {
+    init(from user: User, forNewUser: Bool = false) {
+        self.init(id: forNewUser ? nil : user.id,
+                  createdAt: forNewUser ? nil :  user.lastUpdated.toString(),
+                  updatedAt: forNewUser ? nil :  user.lastUpdated.toString(),
+                  email: user.email,
+                  gender: user.gender.rawValue,
+                  name: user.name,
+                  status: user.status.rawValue)
+    }
 }

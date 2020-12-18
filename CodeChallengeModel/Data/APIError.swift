@@ -7,14 +7,13 @@
 
 import Foundation
 
-extension User {
+public enum APIError { //namespace for ALL errors
     
-    public enum Error: LocalizedError {
-        
+    public enum User: Error { //server is sending detailed errors so no need to have specific error cases here
         case network
         case server(message: String)
         
-        public var errorDescription: String? {
+        public var localizedDescription: String? {
             switch self {
             case .network: return "Something went wrong.\n\nCheck your Internet connection and try again."
             case .server(let message): return message
@@ -32,4 +31,9 @@ extension User {
  
  model - YES?
  - model is the only concrete type exposed across all protocols
+ 
+ model is the core business entity - it must not be aware of such errors?
+ - only being used for its namespace, the errors are part of business?
+ 
+ External enum? YES
  */
