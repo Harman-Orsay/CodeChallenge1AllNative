@@ -46,19 +46,23 @@ extension User {
         case inactive = "Inactive"
     }
 
-    public enum SortableField {
-        case name
-        case id
-        case lastUpdated
+    public enum SortableField: String {
+        case name = "Name"
+        case id = "Id"
+        case lastUpdated = "Most recently updated"
+        
+        public static var all: [SortableField] {
+            [.id, .name, .lastUpdated]
+        }
     }
 }
 
 extension User {
     static func sorter(_ user1: User, _ user2: User, by field: SortableField) -> Bool{
         switch field {
-        case .name: return user1.name < user2.name
+        case .name: return user1.name.lowercased() < user2.name.lowercased()
         case .id: return user1.id < user2.id
-        case .lastUpdated: return user1.lastUpdated < user2.lastUpdated
+        case .lastUpdated: return user1.lastUpdated > user2.lastUpdated
         }
     }
 }

@@ -20,7 +20,12 @@ class UserListViewModel {
     private let repository: UserRepository
     private var subscriptions = Set<AnyCancellable>()
     private var fetching: Bool = false
-    
+    private var sortField: User.SortableField = .id {
+        didSet {
+            sort(field: sortField)
+        }
+    }
+
     @Published private(set) var users: [User] = []
     @Published private(set) var viewAction: UserListViewAction = .initial
     @Published private(set) var activityInprogress = false
@@ -34,7 +39,7 @@ class UserListViewModel {
 extension UserListViewModel {
 
     func actionSort() {
-        viewAction = .sort
+        viewAction = .sort(self, sortField)
     }
     
     func actionAdd() {
@@ -102,5 +107,14 @@ extension UserListViewModel: AddUserResponder {
     func created(user: User) {
         viewAction = .dismiss
         add(user: user)
+    }
+}
+
+extension UserListViewModel: SortFieldSelectionResponder {
+    func selected(field: User.SortableField) {
+        viewAction = .dismiss
+        if sortField != field {
+            sortField = field
+        }
     }
 }

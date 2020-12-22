@@ -16,7 +16,8 @@ extension UserListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = viewModel.users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(user.id)" + ": " + user.name
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = "\(user.id)" + "\n" + user.name
         return cell
     }
     

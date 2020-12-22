@@ -31,13 +31,13 @@ extension UserDataRepository: UserRepository {
 
     var users: AnyPublisher<[User], Never> {
         userPool
-            .map{$0.sorted{ User.sorter($0, $1, by: self.sortField) }}
+            .map{ $0.sorted{ User.sorter($0, $1, by: self.sortField) }}
             .eraseToAnyPublisher()
     }
     
     func add(user: User) -> AnyPublisher<Void, APIError.User> {
         service.add(user: user)
-            .handleEvents(receiveOutput: {self.userPool.value.append($0)})
+            .handleEvents(receiveOutput: {self.userPool.value += [$0]})
             .map{_ in}
             .eraseToAnyPublisher()
     }
@@ -51,11 +51,7 @@ extension UserDataRepository: UserRepository {
     
     func getMore() -> AnyPublisher<Void, APIError.User> {
         service.fetchNextPage()
-            .handleEvents(receiveOutput: {
-                            
-                            self.userPool.value.append(contentsOf: $0)
-                
-            })
+            .handleEvents(receiveOutput: {self.userPool.value += $0})
             .map{_ in}
             .eraseToAnyPublisher()
     }

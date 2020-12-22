@@ -24,6 +24,10 @@ class UserListDependencyContainer {
     func makeAddUserViewModel(responder: AddUserResponder) -> AddUserViewModel {
         AddUserViewModel(responder: responder)
     }
+    
+    func makeSortFieldsViewModel(responder: SortFieldSelectionResponder, selectedField: User.SortableField) ->SortFieldsViewModel {
+        SortFieldsViewModel(currentSortField: selectedField, responder: responder)
+    }
 }
 
 extension UserListDependencyContainer: UserListViewControllerFactory {
@@ -33,8 +37,16 @@ extension UserListDependencyContainer: UserListViewControllerFactory {
         vc.viewModel = makeAddUserViewModel(responder: responder)
         return navC
     }
+    
+    func makeSortFieldsNavigationController(responder: SortFieldSelectionResponder, selectedField: User.SortableField) -> UINavigationController {
+        let navC = UIStoryboard(name: "SortUser", bundle: nil).instantiateViewController(withIdentifier: "SortNavC") as! UINavigationController
+        let vc = navC.viewControllers.first as! SortFieldsTableViewController
+        vc.viewModel = makeSortFieldsViewModel(responder: responder, selectedField: selectedField)
+        return navC
+    }
 }
 
 protocol UserListViewControllerFactory {
     func makeAddUserNavigationController(responder: AddUserResponder) -> UINavigationController
+    func makeSortFieldsNavigationController(responder: SortFieldSelectionResponder, selectedField: User.SortableField) -> UINavigationController
 }

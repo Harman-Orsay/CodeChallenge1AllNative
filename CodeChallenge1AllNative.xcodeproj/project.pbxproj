@@ -15,6 +15,8 @@
 		1813D802259147C90042370A /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D801259147C90042370A /* AddUserViewModel.swift */; };
 		1813D80C2591601E0042370A /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D80B2591601E0042370A /* String+Email.swift */; };
 		185237962591707F003145F4 /* UITextfield+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237952591707F003145F4 /* UITextfield+Combine.swift */; };
+		1852379C2591A14F003145F4 /* SortFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */; };
+		185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
@@ -114,6 +116,8 @@
 		1813D801259147C90042370A /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		1813D80B2591601E0042370A /* String+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
 		185237952591707F003145F4 /* UITextfield+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Combine.swift"; sourceTree = "<group>"; };
+		1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsTableViewController.swift; sourceTree = "<group>"; };
+		185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsViewModel.swift; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				18DFA73A258A933C00538A08 /* SortUser.storyboard */,
+				1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */,
+				185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */,
 			);
 			path = "Sort user";
 			sourceTree = "<group>";
@@ -658,7 +664,9 @@
 				18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */,
 				18DFA747258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.swift in Sources */,
 				18DFA740258A933C00538A08 /* UserList+TableView.swift in Sources */,
+				185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */,
 				18DFA837258C283A00538A08 /* UIScrollView.swift in Sources */,
+				1852379C2591A14F003145F4 /* SortFieldsTableViewController.swift in Sources */,
 				185237962591707F003145F4 /* UITextfield+Combine.swift in Sources */,
 				1813D7E6259005DC0042370A /* AppDependencyContainer.swift in Sources */,
 				18DFA741258A933C00538A08 /* UserListViewController.swift in Sources */,

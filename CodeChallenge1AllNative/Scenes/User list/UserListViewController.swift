@@ -8,11 +8,12 @@
 
 import UIKit
 import Combine
+import CodeChallengeModel
 
 enum UserListViewAction {
     case initial
     case add(AddUserResponder)
-    case sort
+    case sort(SortFieldSelectionResponder, User.SortableField)
     case list
     case dismiss
 }
@@ -86,7 +87,7 @@ class UserListViewController: UIViewController {
         switch viewAction {
         case .initial: break
         case .add(let responder): showAddUser(responder: responder)
-        case .sort: showSortList()
+        case .sort(let responder, let currentSortField): showSortList(responder: responder, currentSortField: currentSortField)
         case .list: showListActions()
         case .dismiss: presentedViewController?.dismiss(animated: true, completion: nil)
         }
@@ -95,11 +96,15 @@ class UserListViewController: UIViewController {
 
 extension UserListViewController {
     func showAddUser(responder: AddUserResponder) {
-        present(viewControllerFactory.makeAddUserNavigationController(responder: responder), animated: true, completion: nil)
+        present(viewControllerFactory.makeAddUserNavigationController(responder: responder),
+                animated: true,
+                completion: nil)
     }
     
-    func showSortList() {
-        
+    func showSortList(responder: SortFieldSelectionResponder, currentSortField: User.SortableField) {
+        present(viewControllerFactory.makeSortFieldsNavigationController(responder: responder, selectedField: currentSortField),
+                animated: true,
+                completion: nil)
     }
     
     func showListActions() {
