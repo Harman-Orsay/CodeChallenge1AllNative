@@ -52,21 +52,23 @@ class UserListViewController: UIViewController {
     }
     
     func fetchMore() {
+        if case .loading = (tableView.tableFooterView as? LoadingIndicatorTableHeaderFooterView)?.state {return}
         tableView.tableFooterView = self.loadingFooter
         loadingFooter.state = .loading
         tableView.scrollToBottom()
         
+        //TODO: - cannot be unit tested - break it into footer state variable & put it in view model
         viewModel.fetchMore()
             .sink(receiveCompletion: { [unowned self]
                 completion in
                 switch completion {
                 case .finished:
+                    self.loadingFooter.state = .completed(message: nil)
                     self.tableView.tableFooterView = nil
                 case .failure(let error):
                     self.loadingFooter.state = .completed(message: error.localizedDescription)
                 }
-            },
-            receiveValue: {_ in})
+            }, receiveValue: {_ in})
             .store(in: &subscriptions)
     }
     
@@ -163,9 +165,12 @@ extension UserListViewController {
                 toggleActivityIndicator(show: state)
             }
             .store(in: &subscriptions)
+        
+        viewModel.errorPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] error in
+                presentAlert(title: error.title, message: error.message)
+            }
+            .store(in: &subscriptions)
     }
 }
-
-//@Published fires on willSet rather than didSet
-//To receive the new value, need to push the execution to next run loop
-//else you will always access the previous value inside sink

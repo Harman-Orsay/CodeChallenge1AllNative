@@ -12,11 +12,6 @@ import CodeChallengeModel
 
 class UserListViewModel {
     
-    enum Error: LocalizedError {
-        //for UI
-        
-    }
-    
     private let repository: UserRepository
     private var subscriptions = Set<AnyCancellable>()
     private var fetching: Bool = false
@@ -29,6 +24,7 @@ class UserListViewModel {
     @Published private(set) var users: [User] = []
     @Published private(set) var viewAction: UserListViewAction = .initial
     @Published private(set) var activityInprogress = false
+    var errorPublisher = PassthroughSubject<(title: String?, message: String), Never>()
 
     init(repository: UserRepository) {
         self.repository = repository
@@ -53,14 +49,18 @@ extension UserListViewModel {
 
 extension UserListViewModel {
     
-    func delete(user: User) -> AnyPublisher<Void, APIError.User> {
+    func delete(user: User) {
         activityInprogress = true
-        return repository.delete(user: user)
-            .handleEvents(receiveCompletion: {
-                [weak self] _ in
+        repository.delete(user: user)
+            .sink(receiveCompletion: {
+                [weak self] completion in
                 self?.activityInprogress = false
-            })
-            .eraseToAnyPublisher()
+                switch completion {
+                case .finished: break
+                case .failure(let error):self?.errorPublisher.send((title: "Could not delete user", message: error.localizedDescription))
+                }
+            }, receiveValue: {})
+            .store(in: &subscriptions)
     }
     
     func fetchMore() -> AnyPublisher<Void, APIError.User> {
@@ -87,13 +87,10 @@ extension UserListViewModel {
             .sink(receiveCompletion: { [weak self]
                 completion in
                 self?.activityInprogress = false
-//                switch completion {
-//
-//                case .finished:
-//                    <#code#>
-//                case .failure(_):
-//                    <#code#>
-//                }
+                switch completion {
+                case .finished: break
+                case .failure(let error):self?.errorPublisher.send((title: "Could not add user", message: error.localizedDescription))
+                }
             }, receiveValue: {})
             .store(in: &subscriptions)
     }

@@ -13,9 +13,9 @@ public enum APIError { //namespace for ALL errors
         case network
         case server(message: String)
         
-        public var localizedDescription: String? {
+        public var localizedDescription: String {
             switch self {
-            case .network: return "Something went wrong.\n\nCheck your Internet connection and try again."
+            case .network: return "Something went wrong. Check your Internet connection and try again."
             case .server(let message): return message
             }
         }

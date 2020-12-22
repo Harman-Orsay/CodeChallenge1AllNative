@@ -17,6 +17,7 @@
 		185237962591707F003145F4 /* UITextfield+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237952591707F003145F4 /* UITextfield+Combine.swift */; };
 		1852379C2591A14F003145F4 /* SortFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */; };
 		185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */; };
+		185237AC25927593003145F4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237AB25927593003145F4 /* UIViewController+Alert.swift */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
@@ -118,6 +119,7 @@
 		185237952591707F003145F4 /* UITextfield+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Combine.swift"; sourceTree = "<group>"; };
 		1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsTableViewController.swift; sourceTree = "<group>"; };
 		185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsViewModel.swift; sourceTree = "<group>"; };
+		185237AB25927593003145F4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			children = (
 				18DFA836258C283900538A08 /* UIScrollView.swift */,
 				185237952591707F003145F4 /* UITextfield+Combine.swift */,
+				185237AB25927593003145F4 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				1813D7EC2590063E0042370A /* UserListDependencyContainer.swift in Sources */,
 				1813D802259147C90042370A /* AddUserViewModel.swift in Sources */,
 				18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */,
+				185237AC25927593003145F4 /* UIViewController+Alert.swift in Sources */,
 				18DFA747258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.swift in Sources */,
 				18DFA740258A933C00538A08 /* UserList+TableView.swift in Sources */,
 				185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */,
