@@ -71,7 +71,7 @@ class UserRestfulService: UserService {
             }
             .map(\.code)
             .tryMap { code -> Void in
-                guard case 200...202 = code else {
+                guard case 200...204 = code else {
                     throw APIError.User.network
                 }
             }

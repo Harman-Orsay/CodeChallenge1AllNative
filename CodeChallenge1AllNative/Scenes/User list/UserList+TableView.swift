@@ -18,7 +18,26 @@ extension UserListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "\(user.id)" + ": " + user.name
         return cell
-    }    
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else{ return }
+        let user = viewModel.users[indexPath.row]
+        
+        viewModel.delete(user: user)
+            .sink(receiveCompletion: { [unowned self]
+                completion in
+                switch completion {
+                case .finished: break
+                case .failure(let error): return //show alert
+                }
+            }, receiveValue: {})
+            .store(in: &subscriptions)
+    }
 }
 
 extension UserListViewController: UITableViewDelegate {
@@ -28,7 +47,7 @@ extension UserListViewController: UITableViewDelegate {
 extension UserListViewController: UIScrollViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if scrollView.hasScrolledToBottom() {
-            viewModel.fetchMoreTask = .requested
+            fetchMore()
         }
     }
 }

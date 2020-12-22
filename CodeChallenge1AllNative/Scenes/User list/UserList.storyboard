@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -30,7 +29,7 @@
         <!--User List View Controller-->
         <scene sceneID="5kY-sf-zR6">
             <objects>
-                <viewController id="HR9-pD-cfG" customClass="UserListViewController" customModule="CodeChallenge1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserListVC" id="HR9-pD-cfG" customClass="UserListViewController" customModule="CodeChallenge1AllNative" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciW-lW-1aw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,8 +50,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="eG0-Dr-2rK">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="edit" id="5qx-iZ-LDg"/>
-                            <barButtonItem image="list.bullet.indent" catalog="system" id="5uO-oW-DOR"/>
+                            <barButtonItem systemItem="add" id="5qx-iZ-LDg">
+                                <connections>
+                                    <action selector="actionAddButton:" destination="HR9-pD-cfG" id="kTs-ga-Nr6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="list.bullet.indent" catalog="system" id="5uO-oW-DOR">
+                                <connections>
+                                    <action selector="actionList:" destination="HR9-pD-cfG" id="Yfj-K5-HJk"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

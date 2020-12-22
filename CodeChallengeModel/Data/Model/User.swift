@@ -14,6 +14,24 @@ public struct User {
     public var gender: Gender
     public var status: Status
     public var lastUpdated: Date
+    
+    public init(name: String, email: String, gender: Gender, status: Status, createdOn: Date) {
+        self.id = -1
+        self.name = name
+        self.email = email
+        self.gender = gender
+        self.status = status
+        self.lastUpdated = createdOn
+    }
+    
+    public init(id: Int, name: String, email: String, gender: Gender, status: Status, lastUpdated: Date) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.gender = gender
+        self.status = status
+        self.lastUpdated = lastUpdated
+    }
 }
 
 extension User {

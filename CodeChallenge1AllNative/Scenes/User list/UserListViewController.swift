@@ -9,15 +9,29 @@
 import UIKit
 import Combine
 
-class UserListViewController: UIViewController {
+enum UserListViewAction {
+    case initial
+    case add(AddUserResponder)
+    case sort
+    case list
+    case dismiss
+}
 
+class UserListViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     lazy var loadingFooter = LoadingIndicatorTableHeaderFooterView(frame: CGRect(origin: CGPoint.zero,
                                                                            size: CGSize(width: tableView.frame.width,
                                                                                         height: 44)))
+    let activityIndicator: UIActivityIndicatorView  = {
+        let indicator = UIActivityIndicatorView(style: .large)
+      indicator.hidesWhenStopped = true
+      return indicator
+    }()
     
-    private var subscriptions = Set<AnyCancellable>()
-    var viewModel = UserListViewModel()
+    var subscriptions = Set<AnyCancellable>()
+    var viewModel: UserListViewModel!
+    var viewControllerFactory: UserListViewControllerFactory!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +39,90 @@ class UserListViewController: UIViewController {
         
         setupTableView()
         setupBindings()
+        fetchMore()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.fetchMoreTask = .requested
+    @IBAction func actionAddButton(_ sender: Any) {
+        viewModel.actionAdd()
+    }
+    
+    @IBAction func actionList(_ sender: Any) {
+        viewModel.actionList()
+    }
+    
+    func fetchMore() {
+        tableView.tableFooterView = self.loadingFooter
+        loadingFooter.state = .loading
+        tableView.scrollToBottom()
+        
+        viewModel.fetchMore()
+            .sink(receiveCompletion: { [unowned self]
+                completion in
+                switch completion {
+                case .finished:
+                    self.tableView.tableFooterView = nil
+                case .failure(let error):
+                    self.loadingFooter.state = .completed(message: error.localizedDescription)
+                }
+            },
+            receiveValue: {_ in})
+            .store(in: &subscriptions)
+    }
+    
+    func toggleActivityIndicator(show: Bool) {
+        if activityIndicator.superview == nil {
+            activityIndicator.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
+            view.addSubview(activityIndicator)
+        }
+        
+        if show {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
+    func process(viewAction: UserListViewAction){
+        switch viewAction {
+        case .initial: break
+        case .add(let responder): showAddUser(responder: responder)
+        case .sort: showSortList()
+        case .list: showListActions()
+        case .dismiss: presentedViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
+extension UserListViewController {
+    func showAddUser(responder: AddUserResponder) {
+        present(viewControllerFactory.makeAddUserNavigationController(responder: responder), animated: true, completion: nil)
+    }
+    
+    func showSortList() {
+        
+    }
+    
+    func showListActions() {
+        guard !tableView.isEditing else {
+            tableView.isEditing = false
+            return
+        }
+        
+        let alert = UIAlertController(title: "List Actions", message: nil, preferredStyle: .actionSheet)
+        let sortAction = UIAlertAction(title: "Sort Users", style: .default, handler: {
+            [unowned self] _ in
+            viewModel.actionSort()
+        })
+        let deleteAction = UIAlertAction(title: "Delete Users", style: .default, handler: {
+            [unowned self] _ in
+            tableView.isEditing = true
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(sortAction)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true)
     }
 }
 
@@ -46,29 +139,23 @@ extension UserListViewController {
     
     func setupBindings() {
         viewModel.$users
-            .receive(on: RunLoop.main)
+            .receive(on: DispatchQueue.main)
             .sink{ [unowned self] _ in
                 tableView.reloadData()
             }
             .store(in: &subscriptions)
         
-        viewModel.$fetchMoreTask
-            .receive(on: RunLoop.main)
-            .sink{ [unowned self] _ in
-                switch viewModel.fetchMoreTask {
-                case .dormant, .requested: return
-                case .inprogress:
-                    self.tableView.tableFooterView = self.loadingFooter
-                    self.loadingFooter.state = .loading
-                    self.tableView.scrollToBottom()
-
-                case .completed(let errorMessage):
-                    guard let message = errorMessage else {
-                        self.tableView.tableFooterView = nil
-                        return
-                    }
-                    self.loadingFooter.state = .completed(message: message)
-                }
+        viewModel.$viewAction
+            .receive(on: DispatchQueue.main)
+            .sink{ [unowned self] action in
+                process(viewAction: action)
+            }
+            .store(in: &subscriptions)
+        
+        viewModel.$activityInprogress
+            .receive(on: DispatchQueue.main)
+            .sink{ [unowned self] state in
+                toggleActivityIndicator(show: state)
             }
             .store(in: &subscriptions)
     }

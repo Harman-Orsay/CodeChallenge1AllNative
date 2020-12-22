@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1813D7E0259004A60042370A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D7DF259004A60042370A /* TabBarViewController.swift */; };
+		1813D7E6259005DC0042370A /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D7E5259005DC0042370A /* AppDependencyContainer.swift */; };
+		1813D7EC2590063E0042370A /* UserListDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */; };
+		1813D7F2259008460042370A /* UserDataDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D7F1259008460042370A /* UserDataDependencyFactory.swift */; };
+		1813D7FC259147860042370A /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D7FB259147860042370A /* AddUserViewController.swift */; };
+		1813D802259147C90042370A /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D801259147C90042370A /* AddUserViewModel.swift */; };
+		1813D80C2591601E0042370A /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813D80B2591601E0042370A /* String+Email.swift */; };
+		185237962591707F003145F4 /* UITextfield+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237952591707F003145F4 /* UITextfield+Combine.swift */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
@@ -98,6 +106,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1813D7DF259004A60042370A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1813D7E5259005DC0042370A /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDependencyContainer.swift; sourceTree = "<group>"; };
+		1813D7F1259008460042370A /* UserDataDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDependencyFactory.swift; sourceTree = "<group>"; };
+		1813D7FB259147860042370A /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		1813D801259147C90042370A /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		1813D80B2591601E0042370A /* String+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
+		185237952591707F003145F4 /* UITextfield+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Combine.swift"; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +229,7 @@
 			children = (
 				18DFA6F9258A92CE00538A08 /* AppDelegate.swift */,
 				18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */,
+				1813D7E5259005DC0042370A /* AppDependencyContainer.swift */,
 				18DFA72C258A933C00538A08 /* Scenes */,
 				18DFA73B258A933C00538A08 /* Common Views */,
 				18DFA702258A92CF00538A08 /* Assets.xcassets */,
@@ -244,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				18DFA735258A933C00538A08 /* Main.storyboard */,
+				1813D7DF259004A60042370A /* TabBarViewController.swift */,
 				18DFA72D258A933C00538A08 /* User list */,
 				18DFA733258A933C00538A08 /* Meta data */,
 				18DFA737258A933C00538A08 /* Add user */,
@@ -259,6 +277,7 @@
 				18DFA730258A933C00538A08 /* UserList+TableView.swift */,
 				18DFA731258A933C00538A08 /* UserListViewController.swift */,
 				18DFA732258A933C00538A08 /* UserList.storyboard */,
+				1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */,
 			);
 			path = "User list";
 			sourceTree = "<group>";
@@ -275,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				18DFA738258A933C00538A08 /* AddUser.storyboard */,
+				1813D7FB259147860042370A /* AddUserViewController.swift */,
+				1813D801259147C90042370A /* AddUserViewModel.swift */,
 			);
 			path = "Add user";
 			sourceTree = "<group>";
@@ -308,6 +329,7 @@
 		18DFA758258A93C400538A08 /* CodeChallengeModel */ = {
 			isa = PBXGroup;
 			children = (
+				1813D7F1259008460042370A /* UserDataDependencyFactory.swift */,
 				18DFA77A258A948100538A08 /* Data */,
 				18DFA779258A946300538A08 /* Network */,
 				18DFA77B258A952900538A08 /* Utility */,
@@ -359,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				18DFA77D258A952900538A08 /* String+Date.swift */,
+				1813D80B2591601E0042370A /* String+Email.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				18DFA836258C283900538A08 /* UIScrollView.swift */,
+				185237952591707F003145F4 /* UITextfield+Combine.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -625,12 +649,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1813D7FC259147860042370A /* AddUserViewController.swift in Sources */,
+				1813D7E0259004A60042370A /* TabBarViewController.swift in Sources */,
 				18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */,
 				18DFA824258B40DF00538A08 /* UserListViewModel.swift in Sources */,
+				1813D7EC2590063E0042370A /* UserListDependencyContainer.swift in Sources */,
+				1813D802259147C90042370A /* AddUserViewModel.swift in Sources */,
 				18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */,
 				18DFA747258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.swift in Sources */,
 				18DFA740258A933C00538A08 /* UserList+TableView.swift in Sources */,
 				18DFA837258C283A00538A08 /* UIScrollView.swift in Sources */,
+				185237962591707F003145F4 /* UITextfield+Combine.swift in Sources */,
+				1813D7E6259005DC0042370A /* AppDependencyContainer.swift in Sources */,
 				18DFA741258A933C00538A08 /* UserListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,7 +692,9 @@
 				18DFA7BC258ABA9B00538A08 /* Endpoint.swift in Sources */,
 				18DFA7A8258A97B400538A08 /* User.swift in Sources */,
 				18DFA7AF258A9D0700538A08 /* UserDataRepository.swift in Sources */,
+				1813D80C2591601E0042370A /* String+Email.swift in Sources */,
 				18DFA7B6258AB14300538A08 /* UserService.swift in Sources */,
+				1813D7F2259008460042370A /* UserDataDependencyFactory.swift in Sources */,
 				18DFA793258A962B00538A08 /* NetworkConstants.swift in Sources */,
 				18DFA78D258A960B00538A08 /* UserDTO.swift in Sources */,
 				18DFA7DE258AD2C200538A08 /* UserReponseErrorDTO.swift in Sources */,
