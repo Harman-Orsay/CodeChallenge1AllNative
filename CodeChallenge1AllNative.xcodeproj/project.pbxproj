@@ -266,10 +266,11 @@
 			children = (
 				18DFA735258A933C00538A08 /* Main.storyboard */,
 				1813D7DF259004A60042370A /* TabBarViewController.swift */,
+				1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */,
 				18DFA72D258A933C00538A08 /* User list */,
-				18DFA733258A933C00538A08 /* Meta data */,
 				18DFA737258A933C00538A08 /* Add user */,
 				18DFA739258A933C00538A08 /* Sort user */,
+				18DFA733258A933C00538A08 /* Meta data */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -277,11 +278,10 @@
 		18DFA72D258A933C00538A08 /* User list */ = {
 			isa = PBXGroup;
 			children = (
-				18DFA823258B40DF00538A08 /* UserListViewModel.swift */,
+				18DFA732258A933C00538A08 /* UserList.storyboard */,
 				18DFA730258A933C00538A08 /* UserList+TableView.swift */,
 				18DFA731258A933C00538A08 /* UserListViewController.swift */,
-				18DFA732258A933C00538A08 /* UserList.storyboard */,
-				1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */,
+				18DFA823258B40DF00538A08 /* UserListViewModel.swift */,
 			);
 			path = "User list";
 			sourceTree = "<group>";
