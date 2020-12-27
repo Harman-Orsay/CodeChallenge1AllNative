@@ -61,7 +61,8 @@ extension Endpoint {
                 jsonParam = jsonData
             }
         }
-        if let urlWithUrlParams = urlComponents.url {
+        
+        if urlComponents.queryItems?.count ?? 0 > 0, let urlWithUrlParams = urlComponents.url{
             url = urlWithUrlParams
         }
         

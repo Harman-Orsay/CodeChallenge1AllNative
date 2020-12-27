@@ -1,0 +1,7 @@
+{
+  "code": 404,
+  "meta": null,
+  "data": [{
+    "message": "Resource not found"
+  }]
+}

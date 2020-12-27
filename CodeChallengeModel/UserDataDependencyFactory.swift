@@ -16,6 +16,10 @@ public class UserDataDependencyFactory {
     }
     
     private func makeService() -> UserService {
-        UserRestfulService()
+        #if TEST || TEST_UI
+        return UserRestfulService()
+        #else
+        return MockUserService()
+        #endif
     }
 }

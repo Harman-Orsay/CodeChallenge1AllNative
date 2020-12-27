@@ -18,11 +18,25 @@
 		1852379C2591A14F003145F4 /* SortFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */; };
 		185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */; };
 		185237AC25927593003145F4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237AB25927593003145F4 /* UIViewController+Alert.swift */; };
+		1852381625953F5F003145F4 /* MockUserServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */; };
+		1852381F25953FD4003145F4 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852380525953D41003145F4 /* MockUserService.swift */; };
+		1852383325954158003145F4 /* MockCreateUserPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852382925954156003145F4 /* MockCreateUserPayload.json */; };
+		1852384625954342003145F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852383C25954274003145F4 /* File.swift */; };
+		1852386B259549F7003145F4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852386A259549F7003145F4 /* Router.swift */; };
+		1852387B25954D3B003145F4 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852387525954C9E003145F4 /* MockRouter.swift */; };
+		1852388825955195003145F4 /* MockDeleteUserFailureResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */; };
+		1852388925955195003145F4 /* MockFetchUsersSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */; };
+		1852388A25955195003145F4 /* MockCreateUserSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */; };
+		185238902595564E003145F4 /* UserRestfulServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852388F2595564E003145F4 /* UserRestfulServiceTests.swift */; };
+		185238AC25980BE0003145F4 /* UserServiceEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185238AB25980BE0003145F4 /* UserServiceEndpointTests.swift */; };
+		185238B625981301003145F4 /* UserDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185238B525981301003145F4 /* UserDataRepositoryTests.swift */; };
+		185238BF2598203E003145F4 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852380525953D41003145F4 /* MockUserService.swift */; };
+		185238C425982058003145F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852383C25954274003145F4 /* File.swift */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
 		18DFA706258A92CF00538A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA704258A92CF00538A08 /* LaunchScreen.storyboard */; };
-		18DFA711258A92CF00538A08 /* CodeChallenge1AllNativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA710258A92CF00538A08 /* CodeChallenge1AllNativeTests.swift */; };
+		18DFA711258A92CF00538A08 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA710258A92CF00538A08 /* UserListViewModelTests.swift */; };
 		18DFA71C258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA71B258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift */; };
 		18DFA740258A933C00538A08 /* UserList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA730258A933C00538A08 /* UserList+TableView.swift */; };
 		18DFA741258A933C00538A08 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA731258A933C00538A08 /* UserListViewController.swift */; };
@@ -34,7 +48,6 @@
 		18DFA747258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA73D258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.swift */; };
 		18DFA748258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA73E258A933C00538A08 /* LoadingIndicatorTableHeaderFooterView.xib */; };
 		18DFA760258A93C400538A08 /* CodeChallengeModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFA757258A93C400538A08 /* CodeChallengeModel.framework */; };
-		18DFA767258A93C400538A08 /* CodeChallengeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA766258A93C400538A08 /* CodeChallengeModelTests.swift */; };
 		18DFA769258A93C400538A08 /* CodeChallengeModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DFA759258A93C400538A08 /* CodeChallengeModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18DFA76C258A93C400538A08 /* CodeChallengeModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFA757258A93C400538A08 /* CodeChallengeModel.framework */; };
 		18DFA76D258A93C400538A08 /* CodeChallengeModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFA757258A93C400538A08 /* CodeChallengeModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -120,6 +133,18 @@
 		1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsTableViewController.swift; sourceTree = "<group>"; };
 		185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsViewModel.swift; sourceTree = "<group>"; };
 		185237AB25927593003145F4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		1852380525953D41003145F4 /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockUserServiceEndpoint.swift; path = CodeChallengeModel/Network/Service/Test/MockUserServiceEndpoint.swift; sourceTree = SOURCE_ROOT; };
+		1852382925954156003145F4 /* MockCreateUserPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCreateUserPayload.json; sourceTree = "<group>"; };
+		1852383C25954274003145F4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = CodeChallengeModel/Utility/Test/File.swift; sourceTree = SOURCE_ROOT; };
+		1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFetchUsersSuccessResponse.json; sourceTree = "<group>"; };
+		1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCreateUserSuccessResponse.json; sourceTree = "<group>"; };
+		1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDeleteUserFailureResponse.json; sourceTree = "<group>"; };
+		1852386A259549F7003145F4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1852387525954C9E003145F4 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		1852388F2595564E003145F4 /* UserRestfulServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRestfulServiceTests.swift; sourceTree = "<group>"; };
+		185238AB25980BE0003145F4 /* UserServiceEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceEndpointTests.swift; sourceTree = "<group>"; };
+		185238B525981301003145F4 /* UserDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepositoryTests.swift; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +152,7 @@
 		18DFA705258A92CF00538A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18DFA707258A92CF00538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA70C258A92CF00538A08 /* CodeChallenge1AllNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1AllNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18DFA710258A92CF00538A08 /* CodeChallenge1AllNativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallenge1AllNativeTests.swift; sourceTree = "<group>"; };
+		18DFA710258A92CF00538A08 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
 		18DFA712258A92CF00538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA717258A92CF00538A08 /* CodeChallenge1AllNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1AllNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA71B258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallenge1AllNativeUITests.swift; sourceTree = "<group>"; };
@@ -145,7 +170,6 @@
 		18DFA759258A93C400538A08 /* CodeChallengeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeChallengeModel.h; sourceTree = "<group>"; };
 		18DFA75A258A93C400538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA75F258A93C400538A08 /* CodeChallengeModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallengeModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18DFA766258A93C400538A08 /* CodeChallengeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallengeModelTests.swift; sourceTree = "<group>"; };
 		18DFA768258A93C400538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA77D258A952900538A08 /* String+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		18DFA78C258A960B00538A08 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
@@ -206,6 +230,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1852380425953D28003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1852380525953D41003145F4 /* MockUserService.swift */,
+				1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */,
+				1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */,
+				1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1852380F25953D70003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */,
+				1852382925954156003145F4 /* MockCreateUserPayload.json */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1852382825953FDB003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1852384F2595435E003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1852383C25954274003145F4 /* File.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1852387425954C7E003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				1852387525954C9E003145F4 /* MockRouter.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		18DFA6ED258A92CE00538A08 = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +315,7 @@
 		18DFA70F258A92CF00538A08 /* CodeChallenge1AllNativeTests */ = {
 			isa = PBXGroup;
 			children = (
-				18DFA710258A92CF00538A08 /* CodeChallenge1AllNativeTests.swift */,
+				18DFA710258A92CF00538A08 /* UserListViewModelTests.swift */,
 				18DFA712258A92CF00538A08 /* Info.plist */,
 			);
 			path = CodeChallenge1AllNativeTests;
@@ -350,8 +417,10 @@
 		18DFA765258A93C400538A08 /* CodeChallengeModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				18DFA766258A93C400538A08 /* CodeChallengeModelTests.swift */,
 				18DFA768258A93C400538A08 /* Info.plist */,
+				185238AB25980BE0003145F4 /* UserServiceEndpointTests.swift */,
+				1852388F2595564E003145F4 /* UserRestfulServiceTests.swift */,
+				185238B525981301003145F4 /* UserDataRepositoryTests.swift */,
 			);
 			path = CodeChallengeModelTests;
 			sourceTree = "<group>";
@@ -359,7 +428,10 @@
 		18DFA779258A946300538A08 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1852387425954C7E003145F4 /* Test */,
 				18DFA792258A962B00538A08 /* NetworkConstants.swift */,
+				1852386A259549F7003145F4 /* Router.swift */,
+				18DFA7C1258AC03100538A08 /* APIError.swift */,
 				18DFA7C7258AC55D00538A08 /* Endpoint */,
 				18DFA7D2258AC66100538A08 /* Service */,
 				18DFA78B258A960B00538A08 /* DTO Model */,
@@ -370,7 +442,6 @@
 		18DFA77A258A948100538A08 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				18DFA7C1258AC03100538A08 /* APIError.swift */,
 				18DFA7AD258A9C8700538A08 /* Repo */,
 				18DFA7A6258A979C00538A08 /* Model */,
 			);
@@ -380,6 +451,7 @@
 		18DFA77B258A952900538A08 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1852384F2595435E003145F4 /* Test */,
 				18DFA77C258A952900538A08 /* Extensions */,
 			);
 			path = Utility;
@@ -397,6 +469,7 @@
 		18DFA78B258A960B00538A08 /* DTO Model */ = {
 			isa = PBXGroup;
 			children = (
+				1852382825953FDB003145F4 /* Test */,
 				18DFA78C258A960B00538A08 /* UserDTO.swift */,
 				18DFA7EF258ADD2000538A08 /* UserReponseSuccessDTO.swift */,
 				18DFA7DD258AD2C200538A08 /* UserReponseErrorDTO.swift */,
@@ -425,6 +498,7 @@
 		18DFA7C7258AC55D00538A08 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
+				1852380F25953D70003145F4 /* Test */,
 				18DFA7BB258ABA9B00538A08 /* Endpoint.swift */,
 				18DFA7CC258AC57400538A08 /* UserService+Endpoint.swift */,
 			);
@@ -434,6 +508,7 @@
 		18DFA7D2258AC66100538A08 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1852380425953D28003145F4 /* Test */,
 				18DFA7B5258AB14300538A08 /* UserService.swift */,
 				18DFA7D3258AC6D800538A08 /* UserRestfulService.swift */,
 			);
@@ -648,6 +723,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1852388925955195003145F4 /* MockFetchUsersSuccessResponse.json in Resources */,
+				1852383325954158003145F4 /* MockCreateUserPayload.json in Resources */,
+				1852388825955195003145F4 /* MockDeleteUserFailureResponse.json in Resources */,
+				1852388A25955195003145F4 /* MockCreateUserSuccessResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +760,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DFA711258A92CF00538A08 /* CodeChallenge1AllNativeTests.swift in Sources */,
+				18DFA711258A92CF00538A08 /* UserListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185238BF2598203E003145F4 /* MockUserService.swift in Sources */,
 				18DFA7FA258AE71200538A08 /* UserRepository.swift in Sources */,
 				18DFA7D4258AC6D800538A08 /* UserRestfulService.swift in Sources */,
 				18DFA812258AF63800538A08 /* User+DTO.swift in Sources */,
@@ -707,11 +787,13 @@
 				1813D80C2591601E0042370A /* String+Email.swift in Sources */,
 				18DFA7B6258AB14300538A08 /* UserService.swift in Sources */,
 				1813D7F2259008460042370A /* UserDataDependencyFactory.swift in Sources */,
+				1852386B259549F7003145F4 /* Router.swift in Sources */,
 				18DFA793258A962B00538A08 /* NetworkConstants.swift in Sources */,
 				18DFA78D258A960B00538A08 /* UserDTO.swift in Sources */,
 				18DFA7DE258AD2C200538A08 /* UserReponseErrorDTO.swift in Sources */,
 				18DFA780258A952900538A08 /* String+Date.swift in Sources */,
 				18DFA7CD258AC57400538A08 /* UserService+Endpoint.swift in Sources */,
+				185238C425982058003145F4 /* File.swift in Sources */,
 				18DFA7C2258AC03100538A08 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,7 +802,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DFA767258A93C400538A08 /* CodeChallengeModelTests.swift in Sources */,
+				1852381F25953FD4003145F4 /* MockUserService.swift in Sources */,
+				185238AC25980BE0003145F4 /* UserServiceEndpointTests.swift in Sources */,
+				1852387B25954D3B003145F4 /* MockRouter.swift in Sources */,
+				185238902595564E003145F4 /* UserRestfulServiceTests.swift in Sources */,
+				1852384625954342003145F4 /* File.swift in Sources */,
+				1852381625953F5F003145F4 /* MockUserServiceEndpoint.swift in Sources */,
+				185238B625981301003145F4 /* UserDataRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +862,172 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		185237F6259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		185237F7259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodeChallenge1AllNative/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.CodeChallenge1AllNative";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		185237F8259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodeChallenge1AllNativeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.CodeChallenge1AllNativeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeChallenge1AllNative.app/CodeChallenge1AllNative";
+			};
+			name = Test;
+		};
+		185237F9259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodeChallenge1AllNativeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.CodeChallenge1AllNativeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CodeChallenge1AllNative;
+			};
+			name = Test;
+		};
+		185237FA259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CodeChallengeModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.CodeChallengeModel";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST TEST_UI";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Test;
+		};
+		185237FB259538D4003145F4 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodeChallengeModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.CodeChallengeModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeChallenge1AllNative.app/CodeChallenge1AllNative";
+			};
+			name = Test;
+		};
 		18DFA71E258A92CF00538A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1105,6 +1359,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA71E258A92CF00538A08 /* Debug */,
+				185237F6259538D4003145F4 /* Test */,
 				18DFA71F258A92CF00538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1114,6 +1369,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA721258A92CF00538A08 /* Debug */,
+				185237F7259538D4003145F4 /* Test */,
 				18DFA722258A92CF00538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1123,6 +1379,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA724258A92CF00538A08 /* Debug */,
+				185237F8259538D4003145F4 /* Test */,
 				18DFA725258A92CF00538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1132,6 +1389,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA727258A92CF00538A08 /* Debug */,
+				185237F9259538D4003145F4 /* Test */,
 				18DFA728258A92CF00538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1141,6 +1399,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA76F258A93C400538A08 /* Debug */,
+				185237FA259538D4003145F4 /* Test */,
 				18DFA770258A93C400538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1150,6 +1409,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18DFA773258A93C400538A08 /* Debug */,
+				185237FB259538D4003145F4 /* Test */,
 				18DFA774258A93C400538A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -64,28 +64,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AVV-N2-50c" id="7Ed-on-CB7"/>
-                        <segue destination="ks8-ri-UCA" kind="show" id="j2A-Zg-fXN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzo-gc-bmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273.913043478261" y="732.58928571428567"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="S3E-bs-Yb5">
-            <objects>
-                <viewController id="ks8-ri-UCA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EHH-NQ-nGQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Dbm-Y1-dX3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0rd-zu-olM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CvU-g2-hHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2414" y="733"/>
         </scene>
     </scenes>
     <resources>

@@ -10,7 +10,8 @@ import Combine
 
 class UserRestfulService: UserService {
     
-    private var nextPage: Int = 1
+    let router: Router
+    private(set) var nextPage: Int = 1
     private static let decoder = JSONDecoder()
     private static let background = DispatchQueue.global(qos: .default)
     
@@ -18,6 +19,10 @@ class UserRestfulService: UserService {
         case fetch(page: Int?)
         case create(user: UserDTO)
         case delete(id: String)
+    }
+    
+    init(router: Router = URLSessionRouter()) {
+        self.router = router
     }
     
     private func advancePage() {
@@ -29,7 +34,7 @@ class UserRestfulService: UserService {
             return Fail<[User], APIError.User>(error: .network).eraseToAnyPublisher()
         }
         
-        return URLSession.shared
+        return router
             .dataTaskPublisher(for: request)
             .receive(on: Self.background)
             .map(\.data)
@@ -58,21 +63,19 @@ class UserRestfulService: UserService {
         guard let request = Endpoint.delete(id: "\(user.id)").urlRequest else {
             return Fail<Void, APIError.User>(error: .network).eraseToAnyPublisher()
         }
-        return URLSession.shared
+        return router
             .dataTaskPublisher(for: request)
             .receive(on: Self.background)
             .map(\.data)
-            .tryMap{ data -> UserDeleteReponseSuccessDTO in
+            .tryMap{ data -> Void in
                 do {
-                    return try Self.decoder.decode(UserDeleteReponseSuccessDTO.self, from: data)
+                    let response = try Self.decoder.decode(UserDeleteReponseSuccessDTO.self, from: data)
+                    guard case 200...204 = response.code else {
+                        throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? APIError.User.network
+                    }
+                    return
                 } catch {
                     throw (try? Self.decoder.decode(UserReponseErrorDTO.self, from: data).error) ?? APIError.User.network
-                }
-            }
-            .map(\.code)
-            .tryMap { code -> Void in
-                guard case 200...204 = code else {
-                    throw APIError.User.network
                 }
             }
             .mapError {
@@ -91,7 +94,7 @@ class UserRestfulService: UserService {
             return Fail<User, APIError.User>(error: .network).eraseToAnyPublisher()
         }
 
-        return URLSession.shared
+        return router
             .dataTaskPublisher(for: request)
             .receive(on: Self.background)
             .map(\.data)
