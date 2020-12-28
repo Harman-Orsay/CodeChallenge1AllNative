@@ -22,10 +22,12 @@ class MockUserService: UserService {
                 .eraseToAnyPublisher()
         }
         
+        
         let userDtos = try! JSONDecoder().decode(UserFetchResponseSuccessDTO.self,
                                                   from: File.getData(name: "FetchUsersSuccessResponse"))
             .data
-       let users = userDtos.map{User(dto: $0)}
+       
+        let users = userDtos.map{User(dto: $0)}
         return Just(users)
             .mapError{_ -> APIError.User in}
             .eraseToAnyPublisher()

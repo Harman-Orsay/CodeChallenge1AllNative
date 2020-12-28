@@ -57,7 +57,7 @@ extension UserListViewModel {
                 self?.activityInprogress = false
                 switch completion {
                 case .finished: break
-                case .failure(let error):self?.errorPublisher.send((title: "Could not delete user", message: error.localizedDescription))
+                case .failure(let error): self?.errorPublisher.send((title: "Could not delete user", message: error.localizedDescription))
                 }
             }, receiveValue: {})
             .store(in: &subscriptions)

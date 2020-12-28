@@ -33,6 +33,8 @@
 		185238C425982058003145F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852383C25954274003145F4 /* File.swift */; };
 		1852390725996DEC003145F4 /* AddUserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852390625996DEC003145F4 /* AddUserUITests.swift */; };
 		1852391925997B02003145F4 /* UserListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852391825997B02003145F4 /* UserListUITests.swift */; };
+		18523944259983F6003145F4 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18523943259983F6003145F4 /* MockUserRepository.swift */; };
+		1852394D259986CB003145F4 /* FetchUsersSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385825954519003145F4 /* FetchUsersSuccessResponse.json */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
@@ -147,6 +149,7 @@
 		185238B525981301003145F4 /* UserDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepositoryTests.swift; sourceTree = "<group>"; };
 		1852390625996DEC003145F4 /* AddUserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserUITests.swift; sourceTree = "<group>"; };
 		1852391825997B02003145F4 /* UserListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUITests.swift; sourceTree = "<group>"; };
+		18523943259983F6003145F4 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -270,6 +273,14 @@
 			isa = PBXGroup;
 			children = (
 				1852387525954C9E003145F4 /* MockRouter.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		18523942259983E5003145F4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				18523943259983F6003145F4 /* MockUserRepository.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -444,6 +455,7 @@
 		18DFA77A258A948100538A08 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				18523942259983E5003145F4 /* Test */,
 				18DFA7AD258A9C8700538A08 /* Repo */,
 				18DFA7A6258A979C00538A08 /* Model */,
 			);
@@ -718,6 +730,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1852394D259986CB003145F4 /* FetchUsersSuccessResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +806,7 @@
 				18DFA793258A962B00538A08 /* NetworkConstants.swift in Sources */,
 				18DFA78D258A960B00538A08 /* UserDTO.swift in Sources */,
 				18DFA7DE258AD2C200538A08 /* UserReponseErrorDTO.swift in Sources */,
+				18523944259983F6003145F4 /* MockUserRepository.swift in Sources */,
 				18DFA780258A952900538A08 /* String+Date.swift in Sources */,
 				18DFA7CD258AC57400538A08 /* UserService+Endpoint.swift in Sources */,
 				185238C425982058003145F4 /* File.swift in Sources */,
