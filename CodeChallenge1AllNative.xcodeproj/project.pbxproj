@@ -314,7 +314,6 @@
 			children = (
 				18DFA6F9258A92CE00538A08 /* AppDelegate.swift */,
 				18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */,
-				1813D7E5259005DC0042370A /* AppDependencyContainer.swift */,
 				18DFA72C258A933C00538A08 /* Scenes */,
 				18DFA73B258A933C00538A08 /* Common Views */,
 				18DFA702258A92CF00538A08 /* Assets.xcassets */,
@@ -348,7 +347,7 @@
 			children = (
 				18DFA735258A933C00538A08 /* Main.storyboard */,
 				1813D7DF259004A60042370A /* TabBarViewController.swift */,
-				1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */,
+				1813D7E5259005DC0042370A /* AppDependencyContainer.swift */,
 				18DFA72D258A933C00538A08 /* User list */,
 				18DFA737258A933C00538A08 /* Add user */,
 				18DFA739258A933C00538A08 /* Sort user */,
@@ -364,6 +363,7 @@
 				18DFA730258A933C00538A08 /* UserList+TableView.swift */,
 				18DFA731258A933C00538A08 /* UserListViewController.swift */,
 				18DFA823258B40DF00538A08 /* UserListViewModel.swift */,
+				1813D7EB2590063D0042370A /* UserListDependencyContainer.swift */,
 			);
 			path = "User list";
 			sourceTree = "<group>";
