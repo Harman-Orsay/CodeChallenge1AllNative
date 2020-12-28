@@ -13,13 +13,12 @@ public class UserDataDependencyFactory {
     
     public func makeRepository() -> UserRepository {
         UserDataRepository(service: makeService())
+//        #if TEST || TEST_UI
+//        #else
+//        #endif
     }
     
     private func makeService() -> UserService {
-        #if TEST || TEST_UI
-        return UserRestfulService()
-        #else
-        return MockUserService()
-        #endif
+      UserRestfulService()
     }
 }

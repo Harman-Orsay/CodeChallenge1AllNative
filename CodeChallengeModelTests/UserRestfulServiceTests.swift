@@ -26,7 +26,7 @@ class UserRestfulServiceTests: XCTestCase {
     
     func testSuccessfulFetchNextPage() {
         mockRouter.nextResponseError = nil
-        mockRouter.nextResponseOutput = (data: File.getData(name: "MockFetchUsersSuccessResponse"),
+        mockRouter.nextResponseOutput = (data: File.getData(name: "FetchUsersSuccessResponse"),
                                          response: URLResponse())
         
         let expectation = self.expectation(description: "waiting for publisher to finish")
@@ -56,7 +56,7 @@ class UserRestfulServiceTests: XCTestCase {
     
     func testFailedDeleteUser() {
         mockRouter.nextResponseError = nil
-        mockRouter.nextResponseOutput = (data: File.getData(name: "MockDeleteUserFailureResponse"),
+        mockRouter.nextResponseOutput = (data: File.getData(name: "DeleteUserFailureResponse"),
                                          response: URLResponse())
         
         let expectation = self.expectation(description: "waiting for publisher to finish")
@@ -90,7 +90,7 @@ class UserRestfulServiceTests: XCTestCase {
 
     func testSuccessfulCreateUser() {
         mockRouter.nextResponseError = nil
-        mockRouter.nextResponseOutput = (data: File.getData(name: "MockCreateUserSuccessResponse"),
+        mockRouter.nextResponseOutput = (data: File.getData(name: "CreateUserSuccessResponse"),
                                          response: URLResponse())
         
         let expectation = self.expectation(description: "waiting for publisher to finish")

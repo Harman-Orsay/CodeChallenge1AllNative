@@ -18,26 +18,26 @@
 		1852379C2591A14F003145F4 /* SortFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852379B2591A14F003145F4 /* SortFieldsTableViewController.swift */; };
 		185237A22591A1E4003145F4 /* SortFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */; };
 		185237AC25927593003145F4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185237AB25927593003145F4 /* UIViewController+Alert.swift */; };
-		1852381625953F5F003145F4 /* MockUserServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */; };
+		1852381625953F5F003145F4 /* StubUserServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852381025953E01003145F4 /* StubUserServiceEndpoint.swift */; };
 		1852381F25953FD4003145F4 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852380525953D41003145F4 /* MockUserService.swift */; };
-		1852383325954158003145F4 /* MockCreateUserPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852382925954156003145F4 /* MockCreateUserPayload.json */; };
+		1852383325954158003145F4 /* CreateUserPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852382925954156003145F4 /* CreateUserPayload.json */; };
 		1852384625954342003145F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852383C25954274003145F4 /* File.swift */; };
 		1852386B259549F7003145F4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852386A259549F7003145F4 /* Router.swift */; };
 		1852387B25954D3B003145F4 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852387525954C9E003145F4 /* MockRouter.swift */; };
-		1852388825955195003145F4 /* MockDeleteUserFailureResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */; };
-		1852388925955195003145F4 /* MockFetchUsersSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */; };
-		1852388A25955195003145F4 /* MockCreateUserSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */; };
+		1852388825955195003145F4 /* DeleteUserFailureResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852386425954690003145F4 /* DeleteUserFailureResponse.json */; };
+		1852388925955195003145F4 /* FetchUsersSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385825954519003145F4 /* FetchUsersSuccessResponse.json */; };
+		1852388A25955195003145F4 /* CreateUserSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1852385E259545BF003145F4 /* CreateUserSuccessResponse.json */; };
 		185238902595564E003145F4 /* UserRestfulServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852388F2595564E003145F4 /* UserRestfulServiceTests.swift */; };
 		185238AC25980BE0003145F4 /* UserServiceEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185238AB25980BE0003145F4 /* UserServiceEndpointTests.swift */; };
 		185238B625981301003145F4 /* UserDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185238B525981301003145F4 /* UserDataRepositoryTests.swift */; };
-		185238BF2598203E003145F4 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852380525953D41003145F4 /* MockUserService.swift */; };
 		185238C425982058003145F4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852383C25954274003145F4 /* File.swift */; };
+		1852390725996DEC003145F4 /* AddUserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852390625996DEC003145F4 /* AddUserUITests.swift */; };
+		1852391925997B02003145F4 /* UserListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852391825997B02003145F4 /* UserListUITests.swift */; };
 		18DFA6FA258A92CE00538A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6F9258A92CE00538A08 /* AppDelegate.swift */; };
 		18DFA6FC258A92CE00538A08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */; };
 		18DFA703258A92CF00538A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA702258A92CF00538A08 /* Assets.xcassets */; };
 		18DFA706258A92CF00538A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA704258A92CF00538A08 /* LaunchScreen.storyboard */; };
 		18DFA711258A92CF00538A08 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA710258A92CF00538A08 /* UserListViewModelTests.swift */; };
-		18DFA71C258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA71B258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift */; };
 		18DFA740258A933C00538A08 /* UserList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA730258A933C00538A08 /* UserList+TableView.swift */; };
 		18DFA741258A933C00538A08 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFA731258A933C00538A08 /* UserListViewController.swift */; };
 		18DFA742258A933C00538A08 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DFA732258A933C00538A08 /* UserList.storyboard */; };
@@ -134,17 +134,19 @@
 		185237A12591A1E4003145F4 /* SortFieldsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFieldsViewModel.swift; sourceTree = "<group>"; };
 		185237AB25927593003145F4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		1852380525953D41003145F4 /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
-		1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockUserServiceEndpoint.swift; path = CodeChallengeModel/Network/Service/Test/MockUserServiceEndpoint.swift; sourceTree = SOURCE_ROOT; };
-		1852382925954156003145F4 /* MockCreateUserPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCreateUserPayload.json; sourceTree = "<group>"; };
+		1852381025953E01003145F4 /* StubUserServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubUserServiceEndpoint.swift; path = CodeChallengeModel/Network/Service/Test/StubUserServiceEndpoint.swift; sourceTree = SOURCE_ROOT; };
+		1852382925954156003145F4 /* CreateUserPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateUserPayload.json; sourceTree = "<group>"; };
 		1852383C25954274003145F4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = CodeChallengeModel/Utility/Test/File.swift; sourceTree = SOURCE_ROOT; };
-		1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFetchUsersSuccessResponse.json; sourceTree = "<group>"; };
-		1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCreateUserSuccessResponse.json; sourceTree = "<group>"; };
-		1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockDeleteUserFailureResponse.json; sourceTree = "<group>"; };
+		1852385825954519003145F4 /* FetchUsersSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FetchUsersSuccessResponse.json; sourceTree = "<group>"; };
+		1852385E259545BF003145F4 /* CreateUserSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateUserSuccessResponse.json; sourceTree = "<group>"; };
+		1852386425954690003145F4 /* DeleteUserFailureResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteUserFailureResponse.json; sourceTree = "<group>"; };
 		1852386A259549F7003145F4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1852387525954C9E003145F4 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		1852388F2595564E003145F4 /* UserRestfulServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRestfulServiceTests.swift; sourceTree = "<group>"; };
 		185238AB25980BE0003145F4 /* UserServiceEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceEndpointTests.swift; sourceTree = "<group>"; };
 		185238B525981301003145F4 /* UserDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepositoryTests.swift; sourceTree = "<group>"; };
+		1852390625996DEC003145F4 /* AddUserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserUITests.swift; sourceTree = "<group>"; };
+		1852391825997B02003145F4 /* UserListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUITests.swift; sourceTree = "<group>"; };
 		18DFA6F6258A92CE00538A08 /* CodeChallenge1AllNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge1AllNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFA6F9258A92CE00538A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFA6FB258A92CE00538A08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 		18DFA710258A92CF00538A08 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
 		18DFA712258A92CF00538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA717258A92CF00538A08 /* CodeChallenge1AllNativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1AllNativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18DFA71B258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallenge1AllNativeUITests.swift; sourceTree = "<group>"; };
 		18DFA71D258A92CF00538A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DFA730258A933C00538A08 /* UserList+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserList+TableView.swift"; sourceTree = "<group>"; };
 		18DFA731258A933C00538A08 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
@@ -234,9 +235,9 @@
 			isa = PBXGroup;
 			children = (
 				1852380525953D41003145F4 /* MockUserService.swift */,
-				1852385825954519003145F4 /* MockFetchUsersSuccessResponse.json */,
-				1852385E259545BF003145F4 /* MockCreateUserSuccessResponse.json */,
-				1852386425954690003145F4 /* MockDeleteUserFailureResponse.json */,
+				1852385825954519003145F4 /* FetchUsersSuccessResponse.json */,
+				1852385E259545BF003145F4 /* CreateUserSuccessResponse.json */,
+				1852386425954690003145F4 /* DeleteUserFailureResponse.json */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -244,8 +245,8 @@
 		1852380F25953D70003145F4 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				1852381025953E01003145F4 /* MockUserServiceEndpoint.swift */,
-				1852382925954156003145F4 /* MockCreateUserPayload.json */,
+				1852381025953E01003145F4 /* StubUserServiceEndpoint.swift */,
+				1852382925954156003145F4 /* CreateUserPayload.json */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -324,8 +325,9 @@
 		18DFA71A258A92CF00538A08 /* CodeChallenge1AllNativeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				18DFA71B258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift */,
 				18DFA71D258A92CF00538A08 /* Info.plist */,
+				1852390625996DEC003145F4 /* AddUserUITests.swift */,
+				1852391825997B02003145F4 /* UserListUITests.swift */,
 			);
 			path = CodeChallenge1AllNativeUITests;
 			sourceTree = "<group>";
@@ -723,10 +725,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1852388925955195003145F4 /* MockFetchUsersSuccessResponse.json in Resources */,
-				1852383325954158003145F4 /* MockCreateUserPayload.json in Resources */,
-				1852388825955195003145F4 /* MockDeleteUserFailureResponse.json in Resources */,
-				1852388A25955195003145F4 /* MockCreateUserSuccessResponse.json in Resources */,
+				1852388925955195003145F4 /* FetchUsersSuccessResponse.json in Resources */,
+				1852383325954158003145F4 /* CreateUserPayload.json in Resources */,
+				1852388825955195003145F4 /* DeleteUserFailureResponse.json in Resources */,
+				1852388A25955195003145F4 /* CreateUserSuccessResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,7 +770,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DFA71C258A92CF00538A08 /* CodeChallenge1AllNativeUITests.swift in Sources */,
+				1852391925997B02003145F4 /* UserListUITests.swift in Sources */,
+				1852390725996DEC003145F4 /* AddUserUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,7 +779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185238BF2598203E003145F4 /* MockUserService.swift in Sources */,
 				18DFA7FA258AE71200538A08 /* UserRepository.swift in Sources */,
 				18DFA7D4258AC6D800538A08 /* UserRestfulService.swift in Sources */,
 				18DFA812258AF63800538A08 /* User+DTO.swift in Sources */,
@@ -807,7 +809,7 @@
 				1852387B25954D3B003145F4 /* MockRouter.swift in Sources */,
 				185238902595564E003145F4 /* UserRestfulServiceTests.swift in Sources */,
 				1852384625954342003145F4 /* File.swift in Sources */,
-				1852381625953F5F003145F4 /* MockUserServiceEndpoint.swift in Sources */,
+				1852381625953F5F003145F4 /* StubUserServiceEndpoint.swift in Sources */,
 				185238B625981301003145F4 /* UserDataRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

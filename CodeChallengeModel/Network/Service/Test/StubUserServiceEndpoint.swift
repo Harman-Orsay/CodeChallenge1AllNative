@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MockUserServiceEndpoint {
+enum StubUserServiceEndpoint {
     case createUser
     case deleteUser
     case fetchUsers
@@ -37,7 +37,7 @@ enum MockUserServiceEndpoint {
     var payload: Data? {
         
         switch self {
-        case .createUser: return File.getData(name: "MockCreateUserPayload", withExtension: "json")
+        case .createUser: return File.getData(name: "CreateUserPayload", withExtension: "json")
         case .deleteUser: return nil
         case .fetchUsers: return nil
         }

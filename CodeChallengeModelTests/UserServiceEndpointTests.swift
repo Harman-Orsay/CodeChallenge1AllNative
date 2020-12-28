@@ -12,7 +12,7 @@ class UserServiceEndpointTests: XCTestCase {
 
     func testAddUserEndpoint() {
         let createUserUrlReq = UserRestfulService.Endpoint.create(user: UserDTO(id: nil, createdAt: nil, updatedAt: nil, email: "zzz@zz.zz", gender: "Male", name: "xxx", status: "Active")).urlRequest
-        let expectedUrlReq = MockUserServiceEndpoint.createUser.urlRequest
+        let expectedUrlReq = StubUserServiceEndpoint.createUser.urlRequest
         
         XCTAssertNotNil(createUserUrlReq?.url, "Add user endpoint did not produce url")
         XCTAssert(createUserUrlReq!.url == expectedUrlReq.url, "Add user endpoint did not produce expected url")
