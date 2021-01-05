@@ -8,8 +8,6 @@
 import Foundation
 import Combine
 
-public let repo: UserRepository = UserDataRepository()
-
 class UserDataRepository {
     
     private var userPool: CurrentValueSubject<[User], Never>
